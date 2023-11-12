@@ -8,9 +8,13 @@ y = np.linspace(-3, 3, 121)
 X, Y = np.meshgrid(x, y)
 Z = X * np.exp(-X**2 - Y**2)
 
-# 用 Matplotlib 可视化三维曲面
 fig = plt.figure()
-ax = fig.add_subplot(projection='3d')
+
+# =============
+# First subplot
+# =============
+# 用 Matplotlib 可视化三维曲面
+ax = fig.add_subplot(121, projection='3d')
 
 ax.plot_surface(X, Y, Z, cmap='RdYlBu_r')
 
@@ -25,6 +29,14 @@ ax.set_zlim(-0.5, 0.5)
 # 设置正交投影
 ax.set_proj_type('ortho')
 # 设置相机视角
+ax.view_init(elev=30, azim=150)
+
+# ==============
+# Second subplot
+# ==============
+# 用 Matplotlib 可视化三维线框
+ax = fig.add_subplot(1, 2, 2, projection='3d')
+ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 ax.view_init(elev=30, azim=150)
 
 plt.show()
