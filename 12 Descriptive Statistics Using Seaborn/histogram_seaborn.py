@@ -1,3 +1,5 @@
+# 直方图是一种常用的数据可视化图表，用于显示数值变量的分布情况。
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 

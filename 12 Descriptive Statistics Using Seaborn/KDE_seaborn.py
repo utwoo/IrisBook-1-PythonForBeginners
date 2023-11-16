@@ -1,3 +1,8 @@
+# 核密度估计 (Kernel Density Estimation, KDE) 是一种非参数方法，用于估计连续变量
+# 的概率密度函数 (Probability Density Function, PDF)。它通过将每个数据点视为一个核函
+# 数 (通常是高斯核函数)，在整个变量范围内生成一系列核函数，然后将这些核函数进行平滑和叠加，
+# 从而得到连续的概率密度估计曲线。
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 
